@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %} 
+<html lang="en">
+<head>
+	<title>faculty page</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/loginpagestyle.css' %} "
+</head>
+<body>
+    <h1>{{user}}</h1>
+    <input type='file' accept=".xls,.xlsx" name="file" value="upload excel file" class="btn"/>
+</body>

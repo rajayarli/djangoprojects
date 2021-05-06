@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %} 
+<html lang="en">
+<head>
+	<title>LOGIN FORM</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/loginpagestyle.css' %} "
+</head>
+<body >
+	<div class="container col-md-7 mt-5">
+		<form method="POST">
+			{% csrf_token %}
+		<div class="card">
+			<div class="card-header bg-dark text-white text-center">
+				<h1>LOGIN FORM</h1>	
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<label>SID</label>
+					<input type="text" name="SID" placeholder="ENTER SID" required class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="password" name="password" placeholder="ENTER PASSWORD" required class="form-control">
+				</div>
+				<div class="form-group">
+				NEW USER?	<a href="{% url 'register' %}">Register</a>
+				</div>
+				<div class="form-group">
+					BULK REGISTRATION?<a href="{% url 'bulkregister' %}">Bulk Register</a>
+				</div>
+				<div class="form-group">
+					<a href="{% url 'changepassword' %}">ChangePassword</a>
+				</div>
+				</div>
+		<div class="card-footer">
+			<div class="form-group " >
+				<input type="submit" value="LOGIN" class="form-control" style="background-color: skyblue" >
+			</div>
+		</div>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
