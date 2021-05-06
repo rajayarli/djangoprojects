@@ -4,7 +4,8 @@ from django.contrib import messages
 from pandas import read_excel
 from datetime import datetime
 # Create your views here.
-
+def index(request):
+    return render(request,"cargapp/index.html")
 def loginpage(request):
     if request.method=='POST':
         sid=request.POST.get('SID')
